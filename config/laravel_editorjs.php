@@ -31,6 +31,20 @@ return [
                     ],
                 ],
             ],
+            'checklist' => [
+                'items' => [
+                    'type' => 'array',
+                    'data' => [
+                        '-' => [
+                            'type'        => 'array',
+                            'data' => [
+                                'text' => 'string',
+                                'checked' => 'boolean'
+                            ]
+                        ],
+                    ]
+                ],
+            ],
             'linkTool'  => [
                 'link' => 'string',
                 'meta' => [
@@ -115,6 +129,16 @@ return [
                     0 => 'left',
                     1 => 'center',
                 ],
+            ],
+            'warning'     => [
+                'title'      => [
+                    'type'        => 'string',
+                    'allowedTags' => 'i,b,a[href],code[class],mark[class]',
+                ],
+                'message'   => [
+                    'type'        => 'string',
+                    'allowedTags' => 'i,b,a[href],code[class],mark[class]',
+                ]
             ],
             'code'      => [
                 'code' => [
