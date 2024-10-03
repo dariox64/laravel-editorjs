@@ -1,8 +1,9 @@
-<div class="ce-block__content" style="pointer-events: none">
-    @foreach ($data['items'] as $item)
-        <div><label>
-            <input class="cdx-checklist__item-checkbox" type="checkbox" {{ $item['checked'] ? 'checked' : '' }}
-                value="{{ $item['text'] }}">
-            {{ $item['text'] }} </label></div>
+<ul>
+    @foreach($data['items'] as $item)
+        <li>
+            <input type="checkbox" {{ $item['checked'] ? 'checked' : '' }} disabled>
+            <span>{!! $item['text'] !!}</span>
+        </li>
     @endforeach
-</div>
+</ul>
+

@@ -31,20 +31,6 @@ return [
                     ],
                 ],
             ],
-            'checklist' => [
-                'items' => [
-                    'type' => 'array',
-                    'data' => [
-                        '-' => [
-                            'type'        => 'array',
-                            'data' => [
-                                'text' => 'string',
-                                'checked' => 'boolean'
-                            ]
-                        ],
-                    ]
-                ],
-            ],
             'linkTool'  => [
                 'link' => 'string',
                 'meta' => [
@@ -130,16 +116,6 @@ return [
                     1 => 'center',
                 ],
             ],
-            'warning'     => [
-                'title'      => [
-                    'type'        => 'string',
-                    'allowedTags' => 'i,b,a[href],code[class],mark[class]',
-                ],
-                'message'   => [
-                    'type'        => 'string',
-                    'allowedTags' => 'i,b,a[href],code[class],mark[class]',
-                ]
-            ],
             'code'      => [
                 'code' => [
                     'type'        => 'string',
@@ -151,6 +127,23 @@ return [
                 'html' => [
                     'type'        => 'string',
                     'allowedTags' => '*',
+                ],
+            ],
+            'checklist' => [
+                'items' => [
+                    'type' => 'array',
+                    'data' => [
+                        '-' => [
+                            'type' => 'array',
+                            'data' => [
+                                'text' => [
+                                    'type' => 'string',
+                                    'allowedTags' => 'i,b,a[href],code[class],mark[class]',
+                                ],
+                                'checked' => 'boolean',
+                            ],
+                        ],
+                    ],
                 ],
             ],
             // 'attaches'  => [
@@ -165,6 +158,14 @@ return [
             //     ],
             //     'title' => 'string',
             // ]
+            'embed' => [
+                'service' => 'string',
+                'source'  => 'string',
+                'embed'   => 'string',
+                'width'   => 'integer',
+                'height'  => 'integer',
+                'caption' => 'string',
+            ],
         ],
     ],
 ];
